@@ -1,8 +1,11 @@
 "homepage": "https://www.curseforge.com/minecraft/mc-mods/tektopia-harvestcraft-compat/files",
   "promos": {
-    "1.12.2-latest": "v1.1",
-    "1.12.2-reccomended": "v1.1",
+    "1.12.2-latest": "v1.2",
+    "1.12.2-reccomended": "v1.2"
   }, 
    "1.12.2": {
+              "1.2": "- villagers eat raw, vanilla, food now.",
               "1.1": "- Fixes a few bugs, and fixed some code too",
-              "1.0": "- First Release",
+              "1.0": "- First Release."
+  }
+}
