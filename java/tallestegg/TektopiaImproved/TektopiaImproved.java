@@ -21,12 +21,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = TektopiaImproved.MODID, name = TektopiaImproved.NAME, version = TektopiaImproved.VERSION, dependencies = "required-after:tektopia")
+@Mod(modid = TektopiaImproved.MODID, name = TektopiaImproved.NAME, version = TektopiaImproved.VERSION, dependencies = "required-after:tektopia", updateJSON = "https://raw.githubusercontent.com/seymourimadeit/TektopiaHarvestCraftCompat/master/update.json")
 public class TektopiaImproved
 {
     public static final String MODID = "tthcc";
     public static final String NAME = "Tektopia HarvestCraft Compat";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.2";
 
     private static Logger logger;
 
@@ -37,6 +37,10 @@ public class TektopiaImproved
     	FoodHelper.register(Items.COOKED_FISH, 10, 17);
     	FoodHelper.register(Items.FISH, 5, 7);
     	FoodHelper.register(Items.CHORUS_FRUIT, 4, 5);
+    	FoodHelper.register(Items.PORKCHOP, 35, 7);
+    	FoodHelper.register(Items.BEEF, 35, 7);
+    	FoodHelper.register(Items.MUTTON, 33, 2);
+    	FoodHelper.register(Items.CHICKEN, 60, 3);
     	FoodHelper.register(ItemRegistry.pizzaItem, 11, 28);
     	FoodHelper.register(ItemRegistry.akutuqItem, 8, 9);
     	FoodHelper.register(ItemRegistry.almondbutterItem, 5, 6);
@@ -1010,50 +1014,52 @@ public class TektopiaImproved
         FoodHelper.register(CropRegistry.getFood(CropRegistry.WHITEMUSHROOM), 5, 3);
         FoodHelper.register(CropRegistry.getFood(CropRegistry.WINTERSQUASH), 5, 3);
         FoodHelper.register(CropRegistry.getFood(CropRegistry.ZUCCHINI), 5, 3);
+        FoodHelper.register(CropRegistry.getFood(CropRegistry.CHILIPEPPER), 5, 3);
         //Fruits
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.APRICOT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.AVOCADO), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.BANANA), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.BREADFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.CASHEW), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.CHERRY), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.CHESTNUT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.CINNAMON), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.COCONUT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.DATE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.DRAGONFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.DURIAN), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.FIG), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.GOOSEBERRY), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.GRAPEFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.GUAVA), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.HAZELNUT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.JACKFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.LEMON), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.LIME), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.LYCHEE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.MANGO), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.MAPLE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.NUTMEG), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.OLIVE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.ORANGE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PAPAYA), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PAPERBARK), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PASSIONFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PAWPAW), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PEACH), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PECAN), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PEPPERCORN), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PERSIMMON), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PISTACHIO), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.PLUM), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.POMEGRANATE), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.RAMBUTAN), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.SOURSOP), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.SPIDERWEB), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.STARFRUIT), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.TAMARIND), 5, 3);
-        FoodHelper.register(CropRegistry.getFood(FruitRegistry.WALNUT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.APRICOT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.AVOCADO), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.BANANA), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.BREADFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.CASHEW), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.CHERRY), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.CHESTNUT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.CINNAMON), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.COCONUT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.DATE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.DRAGONFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.DURIAN), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.FIG), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.GOOSEBERRY), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.GRAPEFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.GUAVA), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.HAZELNUT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.JACKFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.LEMON), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.LIME), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.LYCHEE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.MANGO), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.MAPLE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.NUTMEG), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.OLIVE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.ORANGE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PAPAYA), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PAPERBARK), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PASSIONFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PAWPAW), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PEACH), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PECAN), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PEPPERCORN), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PERSIMMON), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PISTACHIO), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.PLUM), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.POMEGRANATE), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.RAMBUTAN), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.SOURSOP), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.SPIDERWEB), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.STARFRUIT), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.TAMARIND), 5, 3);
+        FoodHelper.register(FruitRegistry.getFood(FruitRegistry.WALNUT), 5, 3);
+
         
 
         logger = event.getModLog();}
