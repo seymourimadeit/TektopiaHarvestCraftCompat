@@ -1,12 +1,12 @@
-"homepage": "https://www.curseforge.com/minecraft/mc-mods/tektopia-harvestcraft-compat/files",
+{
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/tektopia-harvestcraft-compat/files",
   "promos": {
-    "1.12.2-latest": "v1.3",
-    "1.12.2-reccomended": "v1.3"
-  }, 
-   "1.12.2": {
-              "1.3": "- villagers eat the default food when enablevanillaBalance is true"
-              "1.2": "- villagers eat raw, vanilla, food now.",
-              "1.1": "- Fixes a few bugs, and fixed some code too",
-              "1.0": "- First Release."
+    "1.12.2-latest": "1.3",
+    "1.12.2-recommended": "1.3"
+  },
+  "1.12.2": {
+    "1.3": "villagers eat the default food when enablevanillaBalance is true",
+     "1.2": " villagers eat raw, vanilla, food now.",
+    "1.1": " Fixes a few bugs, and fixed some code too."
   }
 }
